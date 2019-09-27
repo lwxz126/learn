@@ -19,7 +19,7 @@ ALTER TABLE `user` ADD UNIQUE (`phone`);
 
 DROP TABLE IF EXISTS `movie`;
 CREATE TABLE `movie` (
-  `name` bigint(20) NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `year` varchar(20) DEFAULT '' comment '年份',
   `director` varchar(200) DEFAULT '' comment '导演',
   `protagonist` varchar(200) DEFAULT '' comment '主演',

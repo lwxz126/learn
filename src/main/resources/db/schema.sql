@@ -24,6 +24,6 @@ CREATE TABLE `movie` (
   `director` varchar(200) DEFAULT '' comment '导演',
   `protagonist` varchar(200) DEFAULT '' comment '主演',
   `prize` varchar(200) DEFAULT '' comment '获奖记录',
-  PRIMARY KEY (`name`)
+  PRIMARY KEY (`id`)
 );
-ALTER TABLE `movie` ADD UNIQUE (`name`);
+ALTER TABLE `movie` ADD UNIQUE (`id`);

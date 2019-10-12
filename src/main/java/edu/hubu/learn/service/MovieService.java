@@ -1,5 +1,7 @@
 package edu.hubu.learn.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +16,9 @@ public class MovieService {
 
     public Movie getMovie(Long id) {
         return movieDao.findById(id).get();
+    }
+
+    public List<Movie> getMovies(){
+        return movieDao.findAll();
     }
 }

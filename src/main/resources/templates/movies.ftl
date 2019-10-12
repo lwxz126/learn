@@ -27,12 +27,12 @@
     <div class="col-md-8">
     <table class="table table-bordered">
     <thead>
-    <th>电影名</th><th>年份</th><th>获奖</th>
+    <th>电影名</th><th>年份</th><th>导演</th><th>主演</th><th>获奖</th>
     </thead>
     <tbody>
     <#list movies as moviename>
     <tr>
-    <td>${moviename.id}</td><td>${moviename.year}</td><td>${moviename.prize}</td>
+    <td>${moviename.id}</td><td>${moviename.year}</td><td>${moviename.director}</td><td>${moviename.protagonist}</td><td>${moviename.prize}</td>
     </tr>
     </#list>
     </tbody>

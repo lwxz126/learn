@@ -36,4 +36,18 @@ public class MoviesController {
         mav.setViewName("movies");
         return mav;
     }
+
+    @RequestMapping("/add")
+    public ModelAndView addMovie() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("add");
+        return mav;
+    }
+
+    @RequestMapping("/do_add")
+    public ModelAndView doAddUser(Movie movie) {
+        MovieService.addMovie(movie);
+        ModelAndView mav = new ModelAndView("redirect:/lwxz/list");
+        return mav;
+    }
 }

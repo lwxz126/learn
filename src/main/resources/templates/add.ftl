@@ -22,23 +22,34 @@
     <div class="row">
       <div class="col-md-4">
         <ul class="nav nav-pills nav-stacked">
-          <li role="presentation" class="active"><a href="/lwxz/list">列表</a></li>
-          <li role="presentation"><a href="/lwxz/add">新增</a></li>
+          <li role="presentation"><a href="/lwxz/list">列表</a></li>
+          <li role="presentation" class="active"><a href="/lwxz/add">新增</a></li>
         </ul>
       </div>
       <div class="col-md-8">      
-        <table class="table table-hover">
-          <thead>
-          <th>编号</th><th>电影名</th><th>年份</th><th>导演</th><th>主演</th><th>获奖</th>
-          </thead>
-          <tbody>
-          <#list movies as moviename>
-          <tr>
-          <td>${moviename.id}</td><td>${moviename.moviename}</td><td>${moviename.year}</td><td>${moviename.director}</td><td>${moviename.protagonist}</td><td>${moviename.prize}</td>
-          </tr>
-          </#list>
-          </tbody>
-        </table>
+        <form action="/lwxz/do_add">
+            <div class="form-group">
+                <label for="moviename">电影名</label>
+                <input type="text" class="form-control" id="moviename" name="moviename" placeholder="请输入电影名">
+            </div>
+            <div class="form-group">
+                <label for="year">年份</label>
+                <input type="text" class="form-control" id="year" name="year" placeholder="年份">
+            </div>
+            <div class="form-group">
+                <label for="director">导演</label>
+                <input type="text" class="form-control" id="director" name="director" placeholder="请输入导演名">
+            </div>
+            <div class="form-group">
+                <label for="protagonist">主演</label>
+                <input type="text" class="form-control" id="protagonist" name="protagonist" placeholder="请输入主演姓名">
+            </div>
+            <div class="form-group">
+                <label for="prize">获奖</label>
+                <input type="text" class="form-control" id="prize" name="prize" placeholder="获奖">
+            </div>
+            <button type="submit" class="btn btn-default">确认</button>
+        </form>
       </div>
     </div>
   </div>
@@ -48,4 +59,4 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
   </body>
-</html> 
+</html>

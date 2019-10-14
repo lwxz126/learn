@@ -21,4 +21,8 @@ public class MovieService {
     public List<Movie> getMovies(){
         return movieDao.findAll();
     }
+
+    public Movie addMovie(Movie movie) {
+        return movieDao.save(movie);
+    }
 }

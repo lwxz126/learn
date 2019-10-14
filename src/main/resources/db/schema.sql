@@ -20,10 +20,10 @@ ALTER TABLE `user` ADD UNIQUE (`phone`);
 DROP TABLE IF EXISTS `movie`;
 CREATE TABLE `movie` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `moviename` varchar(200) DEFAULT '' comment '电影名',
   `year` varchar(20) DEFAULT '' comment '年份',
   `director` varchar(200) DEFAULT '' comment '导演',
   `protagonist` varchar(200) DEFAULT '' comment '主演',
   `prize` varchar(200) DEFAULT '' comment '获奖记录',
   PRIMARY KEY (`id`)
 );
-ALTER TABLE `movie` ADD UNIQUE (`id`);

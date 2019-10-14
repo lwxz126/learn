@@ -30,6 +30,7 @@
       </div>
       <div class="col-md-8">      
         <form action="/lwxz/do_modify">
+           <input type="hidden"id="id" name="id" value="${movie.id}">
             <div class="form-group">
                 <label for="moviename">电影名</label>
                 <input type="text" class="form-control" id="moviename" name="moviename" value="${movie.moviename}" placeholder="请输入电影名">

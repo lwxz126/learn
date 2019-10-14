@@ -24,17 +24,21 @@
         <ul class="nav nav-pills nav-stacked">
           <li role="presentation" class="active"><a href="/lwxz/list">列表</a></li>
           <li role="presentation"><a href="/lwxz/add">新增</a></li>
+          <li role="presentation" class="active"><a href="#">修改</a></li>
+          <li role="presentation"><a href="/lwxz/search">搜索</a></li>
         </ul>
       </div>
       <div class="col-md-8">      
         <table class="table table-hover">
           <thead>
-          <th>编号</th><th>电影名</th><th>年份</th><th>导演</th><th>主演</th><th>获奖</th>
+          <th>编号</th><th>电影名</th><th>年份</th><th>导演</th><th>主演</th><th>获奖</th><th>删除</th><th>修改</th>
           </thead>
           <tbody>
-          <#list movies as moviename>
+          <#list movies as movie>
           <tr>
-          <td>${moviename.id}</td><td>${moviename.moviename}</td><td>${moviename.year}</td><td>${moviename.director}</td><td>${moviename.protagonist}</td><td>${moviename.prize}</td>
+          <td>${movie.id}</td><td>${movie.moviename}</td><td>${movie.year}</td><td>${movie.director}</td><td>${movie.protagonist}</td><td>${movie.prize}</td>
+          <td><a href="/lwxz/delete/${movie.id}">删除</a></td>
+          <td><a href="/lwxz/modify/${movie.id}">修改</a></td>
           </tr>
           </#list>
           </tbody>

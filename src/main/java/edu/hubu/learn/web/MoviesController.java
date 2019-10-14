@@ -45,8 +45,30 @@ public class MoviesController {
     }
 
     @RequestMapping("/do_add")
-    public ModelAndView doAddUser(Movie movie) {
+    public ModelAndView doAddMovie(Movie movie) {
         MovieService.addMovie(movie);
+        ModelAndView mav = new ModelAndView("redirect:/lwxz/list");
+        return mav;
+    }
+
+    @RequestMapping("/modify/{id}")
+    public ModelAndView modifyMovie(@PathVariable Long id) {
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("movie", MovieService.getMovie(id));
+        mav.setViewName("modify");
+        return mav;
+    }
+
+    @RequestMapping("/do_modify")
+    public ModelAndView doModifyMovie(Movie movie) {
+        MovieService.modifyMovie(movie);
+        ModelAndView mav = new ModelAndView("redirect:/lwxz/list");
+        return mav;
+    }
+
+    @RequestMapping("/delete/{id}")
+    public ModelAndView delete(@PathVariable Long id) {
+        MovieService.deleteMovie(id);
         ModelAndView mav = new ModelAndView("redirect:/lwxz/list");
         return mav;
     }

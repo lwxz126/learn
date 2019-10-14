@@ -25,4 +25,12 @@ public class MovieService {
     public Movie addMovie(Movie movie) {
         return movieDao.save(movie);
     }
+
+    public void deleteMovie(Long id) {
+        movieDao.deleteById(id);
+    }
+
+    public void modifyMovie(Movie movie) {
+        movieDao.save(movie);
+    }
 }

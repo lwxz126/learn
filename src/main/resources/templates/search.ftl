@@ -22,27 +22,19 @@
     <div class="row">
       <div class="col-md-4">
         <ul class="nav nav-pills nav-stacked">
-          <li role="presentation" class="active"><a href="/lwxz/list">列表</a></li>
+          <li role="presentation"><a href="/lwxz/list">列表</a></li>
           <li role="presentation"><a href="/lwxz/add">新增</a></li>
-          <li role="presentation" class="active"><a href="#">修改</a></li>
-          <li role="presentation"><a href="/lwxz/search">搜索</a></li>
+          <li role="presentation" class="active"><a href="#">搜索</a></li>
         </ul>
       </div>
       <div class="col-md-8">      
-        <table class="table table-hover">
-          <thead>
-          <th>编号</th><th>电影名</th><th>年份</th><th>导演</th><th>主演</th><th>获奖</th><th>电影海报</th><th>删除</th><th>修改</th><th>电影海报</th>
-          </thead>
-          <tbody>
-          <#list movies as movie>
-          <tr> <td>${movie.id}</td><td>${movie.moviename}</td> <td>${movie.year}</td> <td>${movie.director}</td><td>${movie.protagonist}</td><td>${movie.prize}</td><td>${movie.avatar}</td>
-          <td><a href="/lwxz/delete/${movie.id}">删除</a></td>
-          <td><a href="/lwxz/modify/${movie.id}">修改</a></td>
-          <td><a href="/lwxz/add_avatar/${movie.id}">上传</a></td>
-          </tr>
-          </#list>
-          </tbody>
-        </table>
+        <form action="/lwxz/do_search" method="get">
+            <div class="form-group">
+                <label for="keyword">电影名</label>
+                <input type="text" class="form-control" id="keyword" name="keyword" placeholder="请输入搜索关键词">
+            </div>
+            <button type="submit" class="btn btn-default">确认</button>
+        </form>
       </div>
     </div>
   </div>

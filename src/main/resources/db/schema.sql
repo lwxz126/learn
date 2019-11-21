@@ -25,5 +25,6 @@ CREATE TABLE `movie` (
   `director` varchar(200) DEFAULT '' comment '导演',
   `protagonist` varchar(200) DEFAULT '' comment '主演',
   `prize` varchar(200) DEFAULT '' comment '获奖记录',
+  `avatar_url` varchar(50000) DEFAULT NULL comment '电影海报',
   PRIMARY KEY (`id`)
 );

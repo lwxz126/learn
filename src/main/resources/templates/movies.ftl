@@ -22,16 +22,14 @@
     <div class="row">
       <div class="col-md-4">
         <p>导航</p>
-         
            <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="/lwxz/list">列表</a></li>
+    <li role="presentation" class="active"><a href="/lwxz/list">主页</a></li>
     <li class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        删改添加 <span class="caret"></span>
+        其他功能 <span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
         <li role="presentation"><a href="/lwxz/add">新增</a></li>
-          <li role="presentation" class="active"><a href="#">修改</a></li>
         <li class="divider"></li>
         <li role="presentation"><a href="/lwxz/search">搜索</a></li>
       </ul>
@@ -54,6 +52,34 @@
           </#list>
           </tbody>
 </table>
+
+<caption>电影推荐</caption>
+<div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>   
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="/src/main/resources/templates/泰坦尼克.jpg"  alt="泰坦尼克号"/>
+        </div>
+        <div class="item">
+            <img src="/src/main/resources/templates/狩猎.jpg" alt="狩猎">
+        </div>
+        <div class="item">
+            <img src="/src/main/resources/templates/小丑.jpeg" alt="小丑">
+        </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="carousel-control left" href="#myCarousel" 
+       data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a>
+    <a class="carousel-control right" href="#myCarousel" 
+       data-slide="next">&rsaquo;</a>
+</div>
+
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>

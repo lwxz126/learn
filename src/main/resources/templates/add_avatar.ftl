@@ -22,7 +22,7 @@
     <div class="row">
       <div class="col-md-4">
         <ul class="nav nav-pills nav-stacked">
-          <li role="presentation"><a href="/lwxz/list">列表</a></li>
+          <li role="presentation"><a href="/lwxz/list">主页</a></li>
           <li role="presentation" class="active"><a href="/lwxz/add">新增</a></li>
           <li role="presentation"><a href="/lwxz/search">搜索</a></li>
         </ul>

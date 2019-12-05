@@ -21,6 +21,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
+      <h1>小煊推电影</h1>
         <p>导航</p>
            <ul class="nav nav-tabs">
     <li role="presentation" class="active"><a href="/lwxz/list">主页</a></li>
@@ -38,7 +39,6 @@
  </div>
 
   <table class="table">
-  <caption>所有电影</caption>
    <thead>
           <th>编号</th><th>电影名</th><th>年份</th><th>导演</th><th>主演</th><th>获奖</th><th>电影海报</th><th>删除</th><th>修改</th><th>电影海报</th>
           </thead>
@@ -53,7 +53,7 @@
           </tbody>
 </table>
 
-<caption>电影推荐</caption>
+<h3>电影推荐</h3>
 <div id="myCarousel" class="carousel slide">
     <!-- 轮播（Carousel）指标 -->
     <ol class="carousel-indicators">
@@ -64,13 +64,13 @@
     <!-- 轮播（Carousel）项目 -->
     <div class="carousel-inner">
         <div class="item active">
-            <img src="/src/main/resources/templates/泰坦尼克.jpg"  alt="泰坦尼克号"/>
+            <img src="D:\软件工程\learn\src\main\resources\templates\泰坦尼克.jpg" class="img-thumbnail">
         </div>
         <div class="item">
-            <img src="/src/main/resources/templates/狩猎.jpg" alt="狩猎">
+            <img src="/src/main/resources/templates/狩猎.jpg" class="img-thumbnail">
         </div>
         <div class="item">
-            <img src="/src/main/resources/templates/小丑.jpeg" alt="小丑">
+            <img src="/src/main/resources/templates/小丑.jpeg" class="img-thumbnail">
         </div>
     </div>
     <!-- 轮播（Carousel）导航 -->
